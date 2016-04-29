@@ -1,6 +1,8 @@
 # **[Work in progress]** In-stream Signaling of Identity and Timing information for NMOS Flows
 
-This repository contains details of this AMWA Specification for signaling Source and Flow identifiers and Grain timestamps within streams. Currently this is provided for RTP streams, using RTP header extensions.
+This repository contains details of this AMWA Specification for signaling Source and Flow identifiers and Grain timestamps within streams.
+
+The current specification is applicable to RTP streams using any payload format, via the use of RTP header extensions. Mapping of Grain attributes to transport types other than RTP may be specified in later revisions.
 
 ## Getting started
 
@@ -8,7 +10,7 @@ Readers are advised to be familiar with the NMOS Technical Overview at (https://
 
 ## Contents
 * README.md -- this file
-* [specifications/IdentityTimingRTP.txt](specifications/IdentityTimingRTP.txt) -- Specification for carriage of video, audio and time-related data Flows over RTP, including in-stream signalling of identity and timing using RTP header extensions. _NOTE: although this document presents examples for uncompressed video and audio over RTP it does NOT specify a transport._
+* [specifications/IdentityTimingRTP.txt](specifications/IdentityTimingRTP.txt) -- Specification for carriage of video, audio and time-related data Flows over RTP, including in-stream signalling of identity and timing using RTP header extensions.
 * [examples/sdp](examples/sdp) -- Supporting example SDP files
 * [examples/pcap](examples/pcap) -- Supporting example Wireshark packet capture files
 * [LICENSE](LICENSE) -- Licenses for software and text documents
