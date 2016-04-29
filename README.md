@@ -13,5 +13,6 @@ Readers are advised to be familiar with the NMOS Technical Overview at (https://
 * [specifications/IdentityTimingRTP.txt](specifications/IdentityTimingRTP.txt) -- Specification for carriage of video, audio and time-related data Flows over RTP, including in-stream signalling of identity and timing using RTP header extensions.
 * [examples/sdp](examples/sdp) -- Supporting example SDP files
 * [examples/pcap](examples/pcap) -- Supporting example Wireshark packet capture files
+* [software/wireshark_plugins](software/wireshark_plugins) -- Wireshark plugin supporting parsing of in-stream RTP header extensions
 * [LICENSE](LICENSE) -- Licenses for software and text documents
 * [NOTICE](NOTICE) -- Disclaimer
