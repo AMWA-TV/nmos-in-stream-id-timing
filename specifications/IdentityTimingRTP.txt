@@ -11,7 +11,7 @@ and video conferences profile (AVP) [2] for the carriage of synchronised video d
 audio data, or other time-related data.
 
 Source, Flow and Grain are as defined in the JT-NM Reference Architecture 1.0 [13],
-also described infomatively in the NMOS Technical Overview.
+also described informatively in the NMOS Technical Overview.
 
 Although uncompressed video and audio examples are presented, this specification
 does NOT define a payload format, and is intended to be payload format agnostic.
@@ -20,7 +20,7 @@ structure.
 
 2.  Grain (informative)
 
-This specification uses the concept of a Grain to describe a unit of 
+This specification uses the concept of a Grain to describe a unit of
 mono-essence video, audio or other time-related data.
 
 A video Grain contains a single video frame.
@@ -78,7 +78,7 @@ at the epoch equals the fixed offset.
 
 The RTP clock is specific to a single RTP transmit session. A consequence of
 this is that the RTP timestamp cannot be used to recover information about the
-original sampling time of a Grain which transits multiple RTP sessions. The 
+original sampling time of a Grain which transits multiple RTP sessions. The
 timestamps defined in section 5 are required for this purpose.
 
 A transmitter can calculate the RTP timestamp (rtp_timestamp) from a PTP-derived
@@ -236,7 +236,7 @@ following format:
     Note: the Grain Flags header extension provides a means to identify the
           last packet for both video and audio Grains.
 
-  payload type (PT): 
+  payload type (PT):
     Set to the dynamic payload type value, 96-127. The payload type shall change
     when the encoding changes (e.g. when switching from RFC 4175 to RFC 3190).
     The mapping between payload type and encoding should be provided by an SDP
@@ -254,7 +254,7 @@ following format:
     to RTP clock rate, plus a fixed (random) offset. See section 4 for more
     details. The fixed offset shall be reset to a new random number when the
     SSRC identifier changes.
-     
+
   synchronisation source (SSRC) identifier: 32 bits
     Initial value shall be a random number. The value shall be reset to a new
     random number when the payload type changes or when a step change
@@ -268,10 +268,10 @@ following format:
 The following header extensions are defined in this specification:
   1. PTP Sync Timestamp
   2. PTP Origin Timestamp
-  3. SMPTE ST 12-1 (SMPTE 12M) Timecodes
+  3. SMPTE ST 12-1 (SMPTE 12M) Timecodes (optional)
   4. Flow Identifier
   5. Source Identifier
-  6. Grain Duration
+  6. Grain Duration (optional)
   7. Grain Flags
 
 Header extensions 1-7 are present in the first packet and 7 is present in the
@@ -348,7 +348,8 @@ nano-second field. The length value in the extension header is 9.
 
 The Timecode header extension is specified in [8]. The full format form is
 used - see section 6.2 of [8]. The value is 8 bytes and therefore the length
-value in the extension header is 7.
+value in the extension header is 7.  Use of the Timecode Header Extension is
+optional.
 
 
 6.3.4.  Flow Identifier Header Extension
@@ -366,7 +367,7 @@ length value in the extension header is 15.
 
 The Grain duration is a rational consisting of a 4 byte numerator and 4 byte
 denominator. The value is 8 bytes and therefore the length value in the
-extension header is 7.
+extension header is 7.  Specification of Grain Duration is optional.
 
 
 6.3.7.  Grain Flags Header Extension
@@ -471,7 +472,7 @@ The PTP Sync Timestamp header extension is described using the following line:
 
   a=extmap:<id> urn:x-nmos:rtp-hdrext:sync-timestamp
 
-The <id> is the session local identifier. See [7] for details. 
+The <id> is the session local identifier. See [7] for details.
 
 
 7.4.2. PTP Origin Timestamp
