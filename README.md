@@ -1,4 +1,4 @@
-# **[Work in progress]** In-stream Signaling of Identity and Timing information for NMOS Flows
+# **[Work in progress]** In-stream Signaling of Identity and Timing information for RTP streams
 
 This repository contains details of this AMWA Specification for signaling Source and Flow identifiers and Grain timestamps within streams.
 
