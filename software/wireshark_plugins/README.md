@@ -22,6 +22,5 @@ you should set the value "Header extension id for carrying Flow ID (1-14)" to 3.
 * On any packet with header extensions (e.g. first packet of each grain), you will now see each RFC5285 header extension labelled with its purpose (e.g. Sync Timestamp) and value.
 
 ## Notes
-* Sync and Origin timestamps use the TAI time scale which does not include leap seconds. They will therefore be a number of seconds ahead of UTC. The difference is 36 seconds at Jan 2016 but may increase.
+* Sync and Origin timestamps use the TAI time scale which does not include leap seconds. They will therefore be a number of seconds ahead of UTC. The difference is 37 seconds at Jan 2017 but may increase (as it did at New Year 2017).
 * SMPTE 12M Timecode can carry additional user data in the high order bits of each byte, as well as the timecode values in the low order bits.
-
